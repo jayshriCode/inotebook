@@ -9,6 +9,7 @@ import Signup from './components/Signup';
 import Login from './components/Login';
 import { useState } from 'react';
 
+
 function App() {
   const [alert, setAlert] = useState(null);
   const showAlert = (message, type) => {
@@ -33,6 +34,7 @@ function App() {
             <Route exact path="/login" element={<Login showAlert={showAlert} />} />
           </Routes>
         </div>
+     
       </BrowserRouter>
     </NoteState>
   );

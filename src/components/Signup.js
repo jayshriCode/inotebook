@@ -20,8 +20,8 @@ const Signup = (props) => {
           if(json.success){
             //save auth token
             localStorage.setItem('token', json.authToken);
-            navigate('/');
             props.showAlert("Account created Successfully", "success");
+            navigate('/');
           }else{
             //alert("Invalid credentials");
            // console.log(json.error);
@@ -34,9 +34,10 @@ const Signup = (props) => {
     }
 
     return (
-        <div className='container'>
+        <div className='container mt-3'>
+            <h2 className='my-2'>Create an accout to iNotebook</h2>
             <form onSubmit={handleSubmit}>
-                <div className="mb-3">
+                <div className="my-3">
                     <label htmlFor="name" className="form-label">Name</label>
                     <input type="password" className="form-control" id="name" name='name' onChange={onChange} value={credentials.name} minLength={5} required />
                 </div>
